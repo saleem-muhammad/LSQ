@@ -29,7 +29,7 @@ public interface RemoteExecution
         // TODO If there is a timestamp then use it
         // Otherwise, use sourceFileName + sequenceId
         String logEntryId = serviceId + "_" + (timestamp != null
-                ? timestamp.toInstant().toString()
+                ? timestamp.toInstant().toString() + "_" + seqId
                 : seqId);
 
         return logEntryId;
